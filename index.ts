@@ -8,9 +8,12 @@ import * as logger from "morgan";
 import * as path from "path";
 import * as favicon from "serve-favicon";
 import * as cors from "cors";
+import { connect } from "mongoose";
+import { Config } from "./helper/Config";
 
 import { indexRoutes } from "./routes/index";
 import { userRoutes } from "./routes/user/-index";
+import { pictureRoutes } from "./routes/picture/-index";
 
 
 export class Index {
@@ -26,6 +29,7 @@ export class Index {
     this.middlewares();
     this.routes();
     this.catchErrors();
+    this.checkDbConnection();
   }
   
   
@@ -64,6 +68,20 @@ export class Index {
       res.status(statusCode).send("Server Error");
     });
   }
+
+  /**
+   * Authenticate DB Connection
+   */
+
+  private checkDbConnection(): void {
+    this.app.use((req: Request, res: Response, next: NextFunction)=> {
+      connect(Config.MONGO_CONNECTION_URL);
+      next();
+    });
+    this.app.use((res: Response)=> {
+      res.status(404).json({ status: "Invalid Request!" });
+    });   
+  }
   
   
   /**
@@ -72,5 +90,6 @@ export class Index {
   private routes(): void {
     this.app.use("/", indexRoutes);
     this.app.use("/user", userRoutes);
+    this.app.use("/picture", pictureRoutes);
   }
 }

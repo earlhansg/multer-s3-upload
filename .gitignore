@@ -46,3 +46,6 @@ Thumbs.db
 
 #s3
 s3_config.json
+
+#env
+.env
