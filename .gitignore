@@ -43,3 +43,6 @@ Thumbs.db
 
 #config
 /config/keys.js
+
+#s3
+s3_config.json
