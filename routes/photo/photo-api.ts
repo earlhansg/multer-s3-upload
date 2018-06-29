@@ -15,8 +15,13 @@ export function updatePhoto(req: Request, res: Response, next: NextFunction) {
   res.json("Successfully Updated User");
 }
 
-export function getPhoto(req: Request, res: Response, next: NextFunction) {
-  res.json("Successfully Get Picture Info");
+export async function getPhoto(req: Request, res: Response, next: NextFunction) {
+  const id = req.params.id;
+
+  await Photo
+    .findById( id )
+    .then(response => res.json(response))
+    .catch(err => res.json(err));
 }
 
 export function deletePhoto(req: Request, res: Response, next: NextFunction) {
