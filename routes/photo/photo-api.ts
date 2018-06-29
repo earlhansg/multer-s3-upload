@@ -24,7 +24,12 @@ export async function getPhoto(req: Request, res: Response, next: NextFunction) 
     .catch(err => res.json(err));
 }
 
-export function deletePhoto(req: Request, res: Response, next: NextFunction) {
-  res.json("Successfully Deleted User");
+export async function deletePhoto(req: Request, res: Response, next: NextFunction) {
+  const id = req.params.id;
+
+  await Photo
+    .findByIdAndRemove( id )
+    .then(response => res.json(response))
+    .catch(err => res.json(err));
 }
 
