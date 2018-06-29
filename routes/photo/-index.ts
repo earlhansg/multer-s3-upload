@@ -15,7 +15,7 @@ const photoUpload = multer({
 });
 
 router.post("/", photoUpload.single("path"), photoApi.addPhoto);
-router.put("/", photoApi.updatePhoto);
+router.put("/:id", photoUpload.single("path"), photoApi.updatePhoto);
 router.get("/:id", photoApi.getPhoto);
 router.delete("/:id", photoApi.deletePhoto);
 

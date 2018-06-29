@@ -11,8 +11,8 @@ export async function addPhoto(req: any, res: Response, next: NextFunction): Pro
     .catch(err => res.json(err));
 } 
 
-export function updatePhoto(req: Request, res: Response, next: NextFunction) {
-  res.json("Successfully Updated User");
+export async function updatePhoto(req: any, res: Response, next: NextFunction) {
+    res.json("Updated the Photo");
 }
 
 export async function getPhoto(req: Request, res: Response, next: NextFunction) {
