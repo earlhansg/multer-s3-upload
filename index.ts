@@ -12,8 +12,7 @@ import { connect } from "mongoose";
 import { Config } from "./helper/Config";
 
 import { indexRoutes } from "./routes/index";
-import { userRoutes } from "./routes/user/-index";
-import { pictureRoutes } from "./routes/picture/-index";
+import { photoRoutes } from "./routes/photo/-index";
 
 
 export class Index {
@@ -74,12 +73,10 @@ export class Index {
    */
 
   private checkDbConnection(): void {
-    this.app.use((req: Request, res: Response, next: NextFunction)=> {
-      connect(Config.MONGO_CONNECTION_URL);
-      next();
-    });
-    this.app.use((res: Response)=> {
-      res.status(404).json({ status: "Invalid Request!" });
+    connect(Config.MONGO_CONNECTION_URL, err => {
+      if (err) throw err;
+
+      console.log("DB connected");
     });   
   }
   
@@ -89,7 +86,6 @@ export class Index {
    */
   private routes(): void {
     this.app.use("/", indexRoutes);
-    this.app.use("/user", userRoutes);
-    this.app.use("/picture", pictureRoutes);
+    this.app.use("/photo", photoRoutes);
   }
 }

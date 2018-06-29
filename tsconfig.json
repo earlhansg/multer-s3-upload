@@ -18,9 +18,14 @@
         "node_modules/*",
         "src/types/*"
       ]
-    }
+    },
+    "lib": [
+      "dom",
+      "es7"
+    ],
   },
   "exclude": [
     "node_modules/*"
   ]
+  
 }
