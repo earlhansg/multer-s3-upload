@@ -1,35 +1,23 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction, ErrorRequestHandler } from "express";
 import { Photo } from "../../model/Photo";
+import { Config } from "../../helper/Config";
+import fs = require("fs");
+
+const upload = require('../file-upload');
+const singleUpload = upload.single('path');
 
 
-export async function addPhoto(req: any, res: Response, next: NextFunction): Promise<void> {
-  const path = req.file.path;
+export function addPhoto(req: any, res: Response, next: NextFunction) {
 
-  await Photo
-    .create({ path })
-    .then(response => res.json(response))
-    .catch(err => res.json(err));
-} 
-
-export async function updatePhoto(req: any, res: Response, next: NextFunction) {
-    res.json("Updated the Photo");
+  singleUpload(req, res, (err) => {
+    if (err) {
+      return res.status(422)
+                .send({errors: [{title: 'File Upload Error', detail: err.message}] });
+    }
+    return res.json({'imageUrl': req.file.location});
+  });
 }
 
-export async function getPhoto(req: Request, res: Response, next: NextFunction) {
-  const id = req.params.id;
-
-  await Photo
-    .findById( id )
-    .then(response => res.json(response))
-    .catch(err => res.json(err));
+export async function getPhoto(req: any, res: Response, next: NextFunction){
+  res.json("Hi there");
 }
-
-export async function deletePhoto(req: Request, res: Response, next: NextFunction) {
-  const id = req.params.id;
-
-  await Photo
-    .findByIdAndRemove( id )
-    .then(response => res.json(response))
-    .catch(err => res.json(err));
-}
-

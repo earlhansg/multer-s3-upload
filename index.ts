@@ -40,8 +40,8 @@ export class Index {
     this.app.use(cors({ credentials: true, origin: true }));
     
     this.app.use(logger("dev"));
-    this.app.use(bodyParser.json());
-    this.app.use(bodyParser.urlencoded({extended: false}));
+    this.app.use(bodyParser.json({limit: '50mb'}));
+    this.app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
     this.app.use(cookieParser());
     this.app.use(express.static(path.join(__dirname, "public")));
   }
@@ -86,6 +86,6 @@ export class Index {
    */
   private routes(): void {
     this.app.use("/", indexRoutes);
-    this.app.use("/photo", photoRoutes);
+    this.app.use("/photos", photoRoutes);
   }
 }
