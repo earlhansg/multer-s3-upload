@@ -8,7 +8,6 @@ export const Config = {
     MONGO_CONNECTION_URL: process.env.MONGO_CONNECTION_URL || "",
 
     photosFileFilter: (req: any, file: any, cb: any) => {
-        console.log("enter", file);
         if (PHOTOS_MIME_TYPES.includes(file.mimetype)) {
             return cb(null, true);
         }
