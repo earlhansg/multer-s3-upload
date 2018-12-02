@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  // constructor() { }
 
-  ngOnInit() {
-    console.log("Home component works!");
+
+  public modalRef: BsModalRef; // {1}
+  constructor(private modalService: BsModalService) {} // {2}
+
+  public openModal(template) {
+    this.modalRef = this.modalService.show(template); // {3}
   }
 
+  ngOnInit() {
+    console.log('Home component works!');
+  }
 }
