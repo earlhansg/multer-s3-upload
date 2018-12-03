@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRouting } from './app-routing.module';
 
 import { AppBootstrapModule } from './core/app-bootstrap.module';
-import { AppHomeModule } from './home/app-home.module';
+import { AppLandingModule } from './landing/app-landing.module';
 // import { LoginComponent } from './home/login/login.component';
 
 
@@ -18,7 +18,7 @@ import { AppHomeModule } from './home/app-home.module';
   imports: [
     BrowserModule,
     AppBootstrapModule,
-    AppHomeModule,
+    AppLandingModule,
     AppRouting
   ],
   providers: [],
