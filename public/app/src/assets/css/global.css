@@ -26,7 +26,15 @@
 
 html {
     font-size: 62.6%;
+
 }
+
+/* @media only screen and (max-width: 112.5em) {
+    html {
+        font-size: 75%;    
+    }
+} */
+
 body {
     height: 100%;
     background-image: linear-gradient(to right bottom,
@@ -74,6 +82,41 @@ body {
 .margin-bottom {
     margin-bottom: 3rem;
 }
+
+.header-secondary {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: .2rem;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+}
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 56.25%;    
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%;    
+    }
+    .header-secondary {
+        font-size: 3rem;    
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .header-secondary {
+        font-size: 2.5rem;    
+    }
+}
+
+
 /* // COLORS
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
