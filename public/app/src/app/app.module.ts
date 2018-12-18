@@ -2,13 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-// import { HomeComponent } from './home/home.component';
 
 import { AppRouting } from './app-routing.module';
 
+
 import { AppBootstrapModule } from './core/app-bootstrap.module';
 import { AppLandingModule } from './landing/app-landing.module';
-// import { LoginComponent } from './home/login/login.component';
 
 
 @NgModule({

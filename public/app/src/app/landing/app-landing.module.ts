@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+// import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+// import { FormlyModule } from '@ngx-formly/core';
+
+
+import { SharedModule } from '../shared/shared.module';
 import { SectionsModule } from './sections/app-section.module';
 
 import { LandingComponent } from './landing.component';
@@ -10,7 +16,10 @@ import { LandingComponent } from './landing.component';
     LandingComponent
   ],
   imports: [
-    CommonModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule,
     SectionsModule
   ],
   exports: [
