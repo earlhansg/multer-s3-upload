@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SharedModule } from '../../shared/shared.module';
+import { CoreModule } from '../../core/core.module';
 
 import { LoginComponent } from './login/login.component';
 
@@ -14,13 +13,15 @@ import { LoginComponent } from './login/login.component';
   imports: [
     SharedModule,
     RouterModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    CoreModule
   ],
   declarations: [
     LoginComponent
   ],
   exports: [
-    LoginComponent
+    LoginComponent,
+    CoreModule
   ],
   providers: [],
   entryComponents: []
