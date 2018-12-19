@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRouting } from './app-routing.module';
 
 
-import { AppBootstrapModule } from './core/app-bootstrap.module';
+import { CoreModule } from './core/core.module';
 import { AppLandingModule } from './landing/app-landing.module';
 
 
@@ -16,7 +16,7 @@ import { AppLandingModule } from './landing/app-landing.module';
   ],
   imports: [
     BrowserModule,
-    AppBootstrapModule,
+    CoreModule,
     AppLandingModule,
     AppRouting
   ],

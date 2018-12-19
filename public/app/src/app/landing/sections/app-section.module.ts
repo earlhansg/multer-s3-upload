@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { AppBootstrapModule } from '../../core/app-bootstrap.module';
 import { SharedModule } from '../../shared/shared.module';
 
 import { LoginComponent } from './login/login.component';
@@ -15,8 +14,7 @@ import { LoginComponent } from './login/login.component';
   imports: [
     SharedModule,
     RouterModule,
-    AngularFontAwesomeModule,
-    AppBootstrapModule,
+    AngularFontAwesomeModule
   ],
   declarations: [
     LoginComponent
