@@ -4,20 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from '../shared/shared.module';
-import { SectionsModule } from './sections/app-section.module';
+import { CoreModule } from '../core/core.module';
 
 import { LandingComponent } from './landing.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
-    LandingComponent
+    LandingComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    SectionsModule
+    CoreModule
   ],
   exports: [
     LandingComponent

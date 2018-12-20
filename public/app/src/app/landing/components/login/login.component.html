@@ -1,0 +1,27 @@
+<section class="bg-login">
+    <div class="container-fluid"> 
+         <div class="row">
+             <div class="login">
+                 <div class="login__form">
+                     <form action="#" 
+                           class="form"
+                           [formGroup]="loginForm" 
+                           (ngSubmit)="submit(loginModel)">
+                         <div class="header margin-bottom">
+                             <h2 class="header-secondary">
+                                 upload memories now!
+                             </h2>
+                         </div>
+                         <formly-form [form]="loginForm" [fields]="loginFields" [model]="loginModel">
+                            <button type="submit" class="">Submit</button>
+                         </formly-form>
+                     </form>
+                 </div>
+                 <!-- end of .login__form -->
+             </div>
+             <!-- end of .login -->
+         </div>
+         <!-- end of .row -->
+     </div>
+     <!-- end of .container-fluid -->
+ </section>
