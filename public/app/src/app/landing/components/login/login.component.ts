@@ -5,7 +5,7 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css', '../../../../assets/css/custom-login.input.css']
 })
 export class LoginComponent implements OnInit {
   loginForm   : FormGroup;

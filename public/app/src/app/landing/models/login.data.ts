@@ -7,7 +7,8 @@ export const Login: FormlyFieldConfig[] = [
         className: 'custom__input',
         templateOptions: {
         label: 'Email',
-        placeholder: 'Enter your email'
+        placeholder: 'Enter your email',
+        required: true,
         }
     },
     {
