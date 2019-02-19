@@ -1,4 +1,5 @@
 import { FormlyFieldConfig } from '@ngx-formly/core';
+import { Validators } from '@angular/forms';
 
 export const Login: FormlyFieldConfig[] = [
     {
@@ -6,9 +7,9 @@ export const Login: FormlyFieldConfig[] = [
         type: 'input',
         className: 'custom__input',
         templateOptions: {
-        label: 'Email',
-        placeholder: 'Enter your email',
-        required: true,
+            label: 'Email',
+            placeholder: 'Enter your email',
+            required: true
         }
     },
     {
@@ -17,9 +18,10 @@ export const Login: FormlyFieldConfig[] = [
         className: 'custom__input',
         templateOptions: {
             label: 'Password',
-            placeholder: 'Enter your password'
-            }
-        },
+            placeholder: 'Enter your password',
+            required: true
+        }
+    },
     {
         key: 'type',
         type: 'radio',

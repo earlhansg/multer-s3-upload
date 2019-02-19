@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-landing',
-  templateUrl: './containers/background/background.component.html',
-  styleUrls: ['./containers/background/background.component.css']
+  templateUrl: './containers/landing/landing.component.html',
+  styleUrls: ['./containers/landing/landing.component.css']
 })
 export class LandingComponent implements OnInit {
 

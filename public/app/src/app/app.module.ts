@@ -8,6 +8,7 @@ import { AppRouting } from './app-routing.module';
 
 import { CoreModule } from './core/core.module';
 import { AppLandingModule } from './landing/app-landing.module';
+import { AppDashboardModule } from './dashboard/app-dashboard.module';
 
 
 @NgModule({
@@ -17,8 +18,9 @@ import { AppLandingModule } from './landing/app-landing.module';
   imports: [
     BrowserModule,
     CoreModule,
+    AppRouting,
     AppLandingModule,
-    AppRouting
+    AppDashboardModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

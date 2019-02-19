@@ -27,7 +27,7 @@
     color: #999;
 }
 
-::ng-deep .form__input:invalid {
+::ng-deep .form__input:focus:invalid {
     border-bottom: 3px solid #ff7730;
 }
 

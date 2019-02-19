@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { SharedModule } from '../shared/shared.module';
 import { CoreModule } from '../core/core.module';
+import { LandingRoutingModule } from './landing-routing.module';
 
 import { LandingComponent } from './landing.component';
 import { LoginComponent } from './components/login/login.component';
@@ -18,8 +18,8 @@ import { LoginComponent } from './components/login/login.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule,
-    CoreModule
+    CoreModule,
+    LandingRoutingModule
   ],
   exports: [
     LandingComponent
