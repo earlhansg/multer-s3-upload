@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -15,7 +15,7 @@ import { LoginComponent } from './components/login/login.component';
     LoginComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     CoreModule,
@@ -25,4 +25,4 @@ import { LoginComponent } from './components/login/login.component';
     LandingComponent
   ]
 })
-export class AppLandingModule {}
+export class LandingModule {}

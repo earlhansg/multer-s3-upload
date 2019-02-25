@@ -4,13 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'login',
-    loadChildren: './landing/app-landing.module#AppLandingModule'
+    loadChildren: './landing/landing.module#LandingModule'
   },
   {
     path: 'dashboard',
-    loadChildren: './dashboard/app-dashboard.module#AppDashboardModule'
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
+  },
+  {
+    path: '', redirectTo: 'login', pathMatch: 'full'
   }
 ];
 
 
 export const AppRouting = RouterModule.forRoot(routes, { useHash: false });
+

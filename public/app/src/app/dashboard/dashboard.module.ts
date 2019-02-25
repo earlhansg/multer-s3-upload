@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { CoreModule } from '../core/core.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -11,10 +11,10 @@ import { DashboardComponent } from './dashboard.component';
     DashboardComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     CoreModule,
     DashboardRoutingModule
   ],
   exports: []
 })
-export class AppDashboardModule {}
+export class DashboardModule {}
