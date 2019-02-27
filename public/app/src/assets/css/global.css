@@ -29,16 +29,7 @@ html {
 
 }
 
-/* @media only screen and (max-width: 112.5em) {
-    html {
-        font-size: 75%;    
-    }
-} */
-
 body {
-    height: 100%;
-    background-image: linear-gradient(to right bottom,
-    rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
     font-family: 'Montserrat-Regular', 'sans-serif' !important;
     color: #777 !important;
     box-sizing: border-box;
@@ -116,42 +107,6 @@ body {
     }
 }
 
-/* .form-control {
-    font-size: 1.5rem !important;
-    font-family: inherit !important;
-    color: inherit !important;
-    padding: 1.5rem 2rem !important;
-    border-radius: 2px !important;
-    background-color: rgba(255, 255, 255, 0.5) !important;
-    border: none !important;
-    border-bottom: 3px solid transparent !important;
-    width: 90% !important;
-    display: block !important;
-    transition: all .3s !important;
-}
-
-.form-control:focus {
-    outline: none !important;
-    box-shadow: 0 1rem 2rem rgba(5, 5, 5, 0.1) !important;
-    border-bottom: 3px solid #55c57a !important;
-}
-
-.form-control::placeholder {
-    color: #999 !important;
-}
-
-label {
-    font-size: 1.2rem !important;
-    font-weight: 700 !important;
-    display: block !important;
-    transition: all .3s !important;
-}
-
-.form-control:placeholder-shown + label {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: translateY(-4rem) !important;
-} */
 
 /* // COLORS
 $color-primary: #55c57a;
