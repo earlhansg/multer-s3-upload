@@ -28,6 +28,14 @@
     margin-top: 6rem;
 }
   
-#sidebar a {
+#sidebar a, a:link, a:visited {
     text-decoration: none;
+    color: #777;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: all 0.2s;
+}
+
+#sidebar a:hover, a:active {
+    color: #404040;
 }
